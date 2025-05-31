@@ -104,9 +104,16 @@ strong {
     text-decoration-color: orange;
 }
 
-a {
+a, a q {
     color: #c00;
     text-decoration: none;
+}
+
+q
+{
+    font-family: "Merriweather", serif;
+        font-style: italic;
+        color: white;
 }
 
 .project-list li {
@@ -128,4 +135,45 @@ footer {
     float: right;
     margin-left: 15px;
     width: 200px;
+}
+.tabs, .tabss {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 15px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+}
+
+.tab.active {
+    border-color: green;
+    font-weight: bold;
+}
+
+.content {
+    display: none;
+}
+
+.content.active {
+    display: block;
+}
+
+.image {
+    width: 200px;
+    image-rendering: pixelated;
+}
+
+.caption {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.images {
+    display: flex;
+    gap: 50px;
+    align-items: center;
 }

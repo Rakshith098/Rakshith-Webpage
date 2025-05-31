@@ -11,29 +11,28 @@
 <body>
     <header>
         <b> Rakshith's Portfolio </b>
-        <nav>
-            <a href="#about">About me</a>
+            <nav>
+                <a href="#about">About me</a>
         <div class="dropdown">
             <a href="#Projects">My Projects ▼</a>
-            <div class="dropdown-content">
-            <li><a href="#Youtube">Youtube</a></li>
-            <li><a href="#Instagram">Instagram</a></li>
-            <li><a href="#Stories">Fiction Stories</a></li>
-            <li><a href="#Songs">Few Songs</a></li></div></div>
+                <div class="dropdown-content">
+                <li><a href="#Youtube">Youtube</a></li>
+                <li><a href="#Instagram">Instagram</a></li>
+                <li><a href="#Stories">Fiction Stories</a></li>
+                <li><a href="#Songs">Few Songs</a></li></div></div>
 
-            <a href="#Appearances">Appearances</a>
-            <a href="#Contact">Contact</a>
-        </nav>
+                <a href="#Appearances">Appearances</a>
+                <a href="#Contact">Contact</a>
+            </nav>
     </header>
     <main>
         <article>
-            
             <section id="about">
-            <h2>About me</h2>
-            <figure class="Image-a">
-                <img src="Assets/Images/Image of Rakshith.jpg" alt="Image of Rakshith" height="400px">
-                <p>
-                    <b>Hey! I’m Rakshith — a creative all-rounder with a passion for both the arts and technology. Whether it’s rapping a
+                <h2>About me</h2>
+                    <figure class="Image-a">
+                        <img src="Assets/Images/Image of Rakshith.jpg" alt="Image of Rakshith" height="400px">
+                            <p>
+                                <b>Hey! I’m Rakshith — a creative all-rounder with a passion for both the arts and technology. Whether it’s rapping a
                     rock tune, dancing to a beat, sketching vibrant art, or acting in front of the camera, I thrive on expression and
                     storytelling. I also love directing projects and editing various projects, especially when I get to bring my vision to life with a talented team of
                     collaborators.
@@ -41,116 +40,216 @@
                     Beyond the creative side, I’m a big fan of gaming (you’ll find me in Minecraft as RKFyter), cooking up delicious dishes, playing sports like Cricket and Basketball
                     and writing code to build cool websites and apps. I believe in combining fun, passion, and skill in everything I do.
                     <br><br>
-                    Together with my collaborators, I aim to create experiences that leave a mark — whether on a stage, a screen, or a server</b>
-                </p>
-            </figure>
+                    Together with my collaborators, I aim to create experiences that leave a mark — whether on a stage, a screen, or a server
+                                </b>
+                            </p>
+                    </figure>
             </section>
             
             <section id="Projects">
                 <h2>My Projects</h2>
 
-                <p>
+            <p>
                 <ul id="project-list">
-                <li>
-                <h3 id="Youtube">Youtube</h3>
-                <b>I have two channels featured in youtube, they are Ra-Ri Channel and Ra-Ri Clips</b>
-                </li>
+                   <b> Every Project I made has a story behind it like how it started, how had it become, description of it. I will say out the story behind it</b>
+                    <li>
+                        <h3 id="Youtube">Youtube</h3>
+                            <b> I have two channels featured in youtube, they are Ra-Ri Channel and Ra-Ri Clips <br><br>
+                    Out of all the Projects, I feel like Youtube is the biggest one. <br><br>
+                     It all started in 4th grade when I said, <q>I want to make a Youtube Channel</q> where my mother replied,<q>Ok, but what content will you feature in there?</q><br>
+                Then in 6th grade, just before August 2021, I made a video called,<a href="https://youtu.be/jIgEpIKc44E?feature=shared"><q>Nutritious Milkshake</q></a> for a school project. But to send it there, Whatsapp will be a difficult option and so, my father helped me release that video on my mother's account. Then my father found out that all the entertaining videos can be sent to youtube as memories and thus <u>Ra-Ri Channel</u> is born. <br>
+                 The logo and channel was created by my father<br><br> 
+                 The first idea I thought to do was teaching Science. But then all changed to just simple and short videos of Arts and Crafts and Vlogs <br><br>
+                 While Ra-Ri clips is a later channel, just used temporarily before it is shut down. 
+                            </b>
+                    </li>
                 <ol>
                     <dl>
-                    <li><dt><h4>Ra-Ri Channel</h4></dt></li>
-
-                    <figure class="image-right-container">
-                       <img src="Assets/Images/Siblings.jpg" alt="Photo of Rakshith and Rithvika" height="290px" class="image-right"></td>
-                    <a href="https://youtube.com/@rarichannel098?feature=shared"><img src="Assets/Images/channels4_profile.jpg" alt="Image of Ra-Ri Channel" class="image-right"/></a>
+                        <li>
+                            <dt>
+                                <h4>
+                                    Ra-Ri Channel
+                                </h4>
+                            </dt>
+                        </li>
                     
-                    <dd><b>The <mark>Ra-Ri Channel</mark> is a YouTube platform created by siblings Rakshith and Rithvika, launched on August 6, 2021. The
+                    <div class="tabs">
+                        <div class="tab active" onclick="showTab('Ra-Ri Channel Image')">Channel Logo</div>
+                        <div class="tab" onclick="showTab('Siblings')">Channel Founders</div>
+                        <!-- Add more tabs as needed -->
+                    </div>
+                    
+                    <div id="Ra-Ri Channel Image" class="content active">
+                        <div class="images">
+                            <div>
+                                <img class="image" src="Assets/Images/channels4_profile.jpg" alt="Ra-Ri Channel Image" />
+                                <div class="caption">Ra-Ri Channel</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="Siblings" class="content">
+                        <div class="images">
+                            <div>
+                                <img class="image" src="Assets/Images/Siblings.jpg" alt="Image of Rakshith and Rithu" />
+                                <div class="caption">Rakshith and Rithvika</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <script>
+                        function showTab(id) {
+                            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+                            document.querySelectorAll('.content').forEach(content => content.classList.remove('active'));
+                            document.querySelector(`.tab[onclick="showTab('${id}')"]`).classList.add('active');
+                            document.getElementById(id).classList.add('active');
+                        }
+                    </script> 
+                    <br><br>
+                    <dd>
+                        <b>The <mark>Ra-Ri Channel</mark> is a YouTube platform created by siblings Rakshith and Rithvika, launched on August 6, 2021. 'Ra' is short for Rakshith and 'Ri' is short for Rithvika. The
                     channel features a diverse range of content, including cooking tutorials, skits, dance performances, and vlogs,
                     reflecting the duo's creativity and versatility. With 191 subscribers and 221 videos, the channel offers a glimpse into
-                    their dynamic and engaging content <br></figure>
-                
-                    <br>
+                    their dynamic and engaging content <br><br>
                     Here are a few more types of videos they've posted:
-                   <ol> 
-                   <li><strong> Cooking tutorials</strong> – Simple recipes and food preparation videos.</li>
+                    <ol> 
+                        <li><strong> Cooking tutorials</strong> – Simple recipes and food preparation videos.</li>
                     
-                   <li> <strong>Dance performances</strong> –  Choreographed routines by the siblings.</li>
+                        <li> <strong>Dance performances</strong> –  Choreographed routines by the siblings.</li>
                     
-                   <li><strong> Fun skits and short plays </strong>– family-friendly and often humorous.</li>
+                        <li><strong> Fun skits and short plays </strong>– family-friendly and often humorous.</li>
                     
-                    <li><strong>Festival-themed crafts</strong> – including Diwali decorations and Christmas cards.</li>
+                        <li><strong>Festival-themed crafts</strong> – including Diwali decorations and Christmas cards.</li>
                     </ol><br><br>
                     <table border="2">
                         Songs from Ra-Ri Channel
                     <tr>
-                    <th>The Old Intro and Outro sounds</th>
-                    <td><audio controls><source src="Assets/Audios/First Intro and Outro.mp3" type="audio/mp3"></audio></td>
+                        <th>The Old Intro and Outro sounds</th>
+                        <td><audio controls><source src="Assets/Audios/First Intro and Outro.mp3" type="audio/mp3"></audio></td>
                     </tr>
                     <tr>
-                    <th>Rithu Singing <q>Rise Above</q></th>
-                    <td><audio controls><source src="Assets/Audios/Rise_Above.mp3" type="audio/mp3"></audio></td>
+                        <th>Rithu Singing <q>Rise Above</q></th>
+                        <td><audio controls><source src="Assets/Audios/Rise_Above.mp3" type="audio/mp3"></audio></td>
                     </tr>
                     <tr>
-                    <th>Rakshith rapping <q>Is Life a Math Device</q></th>
-                    <td><audio controls><source src="Assets/Audios/Is_Life_A_Math_Device.mp3" type="audio/mp3"></audio></td>
+                        <th>Rakshith rapping <q>Is Life a Math Device</q></th>
+                        <td><audio controls><source src="Assets/Audios/Is_Life_A_Math_Device.mp3" type="audio/mp3"></audio></td>
                     </tr>
                     </table><br><br>
                     
                     To explore more, you can visit <a href="https://youtube.com/@rarichannel098?feature=shared">Ra-Ri Channel</a> <br>
-                    Also to see their webpage, you can press this <a href="Ra-Ri Channel/Ra-Ri Channel.htm">Link</a></dd><br><br>
+                    Also to see the webpage, you can press this <a href="Ra-Ri Channel/Ra-Ri Channel.htm">Link</a>
+                    </dd><br><br>
 
+                    <figure>
                     Sample videos below <br>
                     </b>
 
-                    <video autoplay muted controls height="400px">
+                        <video autoplay muted height="400px" loop>
                         <source src="Assets/Videos/Eating Belgian Waffle at Punjagutta.mp4" type="video/mp4">
-                    </video>
+                        </video>
                     
-                    <video autoplay muted controls height="400px">
+                        <video autoplay muted height="400px" loop>
                         <source src="Assets/Videos/Making a Sandwich.mp4" type="video/mp4">
-                    </video>
+                        </video>
                     
-                    <video autoplay muted controls height="300px">
+                        <video autoplay muted height="400px" loop>
                         <source src="Assets/Videos/Rithu Dance IV  APT song by Rose and Bruno Mars (Most viewed).mp4" type="video/mp4">
-                    </video>
+                        </video>
+                    </figure>
                     <br>
                     
-                    <li><dt><h4>Ra-Ri Clips</h4></dt></li>
+                    <li>
+                        <dt>
+                            <h4>
+                                Ra-Ri Clips
+                            </h4>
+                        </dt>
+                    </li>
                     <figure class="image-right-container">
                     <a href="https://www.youtube.com/@rariclips2321"><img src="Assets/Images/channels3_profile.jpg" alt="Image of Ra-Ri Clips" class="image-right"></a>
-                    <dd>
+                        <dd>
                         <b>The Ra-Ri Channel has a second YouTube channel called <mark> Ra-Ri Clips.</mark> <br>
                         This secondary channel is dedicated to showcasing the best clips from their main videos, providing viewers with short,
                         engaging highlights from their original content. It's an excellent way to enjoy quick moments from their cooking
                         tutorials, skits, dance performances, and vlogs <br>
                         
-                        You can explore <a href="https://www.youtube.com/@rariclips2321">Ra-Ri Clips</a></b>
-                    </dd>
+                        You can explore <a href="https://www.youtube.com/@rariclips2321">Ra-Ri Clips</a>
+                        </dd>
                     </figure>
                     </dl>
-                </ol></p>
-                <li><h3 id="Instagram">Instagram</h3></li>
-               <b> It features behind-the-scenes glimpses, personal updates, creative content, and clips  tied to their YouTube activities, including arts, crafts, and performances. <br>
+                    <figure>
+                    Sample videos below <br>
+                    </b>
+                    
+                        <video autoplay muted height="400px" loop>
+                        <source src="Assets/Videos/Eating at Balaji Family Dhaba.mp4" type="video/mp4">
+                        </video>
+                    
+                        <video autoplay muted height="400px" loop>
+                        <source src="Assets/Videos/This Water Slide is fun!!!.mp4" type="video/mp4">
+                        </video>
+                    
+                        <video autoplay muted height="400px" loop>
+                        <source src="Assets/Videos/When you win all Olympiad and get 1 million rupees.mp4" type="video/mp4">
+                        </video>
+                    </figure>
+                    </ol>
+            </p>
+
+                <li>
+                    <h3 id="Instagram">Instagram</h3>
+                </li>
+
+                <figure class="image-right-container">
+                <a href="https://www.instagram.com/rakrithu_s_04/"><img src="Assets/Images/Instagram Image.jpg" alt="Image of the username in Instagram" class="image-right" height="200px"></a>
+
+               <b>Ok, Instagram is like <a href="https://en.wikipedia.org/wiki/YouTube">Youtube</a> but with photos for me. <br><br>
+
+                 During the New year of 2023, My fellow classmates asked for our <q>Instagram ids</q> to write on the board. I dont have one, so they created a fake id, <u>rakshith_s_04</u>. After the New year. I made my Instagram account to make it like I have it. It features behind-the-scenes glimpses, personal updates, creative content, and clips  tied to the YouTube activities, including arts, crafts, and performances. Instead of Rakshith, I used <u>rakrithu</u>, the portmanteau of Rakshith and Rithvika in the username<br><br>
                 
                 You can check out the profile  <a href="https://www.instagram.com/rakrithu_s_04/">@rakrithu_s_04</a> on Instagram </b>
+                </figure>
+                <figure>
+                    <b>Sample Images below</b><br>
+                    <a href="https://www.instagram.com/p/DH00eHyIG7b/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
+                        <img src="Assets/Images/Screenshot 2025-05-31 142241.png" alt="Image by Achi Bhai!" height="400px">
+                    </a>
+                    <a href="https://www.instagram.com/p/C1gYIZorDkt/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
+                        <img src="Assets/Images/Screenshot 2025-05-31 144733.png" alt="Image of the Plants!" height="400px">
+                    </a>
+                </figure>
+
                 <li><h3 id="Stories">Fiction Stories</h3></li>
                 <p><b>When I read the stories of Sudha Murthy and Ruskin Bond, I decided to write stories as well, although I made only two stories. My thought is <q>To not only read stories and make one</q></b></p>
                 <ol><dl>
                     <li><dt><h4>The Rubix Magician- The Full story</h4></dt></li>
+                    <figure class="image-right-container">
+                        <a href="https://www.wattpad.com/story/316352304-rubik%27s-magician-the-full-story">
+                            <img src="Assets/Images/Rubix Magician.jpg" alt="Image of the Rubix magician" class="image-right">
+                        </a>
                     <dd><b><mark>Rubix Magician</mark> is an epic story blending historical conflict, supernatural powers, and modern
                         heroism. <br> It follows Ravi, a gifted Rubik’s Cube prodigy known as the Rubik’s Magician, who discovers mysterious
                         powers after saving a championship from terrorists. Meanwhile, Amora, the reincarnation of a fallen British warrior
                         seeking revenge, wages war against India. With the help of his possessed arm, housing the spirit of his late friend
                         Teju, Ravi embarks on a quest to retrieve three mystical artifacts and stop the dark forces threatening his country. <br>
                         The story explores themes of legacy, sacrifice, and the battle between good and evil across generations. <br>
-                        You can read the entire story of Rubix Magician <a href="https://www.wattpad.com/story/316352304-rubik%27s-magician-the-full-story">Here</a>
+                        You can read the entire story of  <a href="https://www.wattpad.com/story/316352304-rubik%27s-magician-the-full-story">Rubix Magician</a>
                     </b>
                     </dd>
+                    </figure>
                     <li><dt><h4>Obsession- A Glory or A Misery</h4></dt></li>
+                    <figure class="image-right-container">
+                    <a href="https://www.wattpad.com/story/395064563-obsession-a-glory-or-a-misery">
+                        <img src="Assets/Images/Obsession.png" alt="Image of Obsession" class="image-right">
+                    </a>
                     <dd><b><mark>Obsession</mark> is not just a story—it’s a descent. A fan writes letters to his idol, seeking recognition,
                     comfort, and connection. But with each word, his mind fractures, his admiration curdles into fixation. When the final
                     letter arrives, soaked in desperation and silence, a chilling truth emerges. The idol, Ramant, must face a twisted past,
                     a betrayal that runs deeper than fame—and a revenge that refuses to stay buried. Behind the spotlight lies something
-                    darker. <br> You can read the story <a href="https://www.wattpad.com/story/395064563-obsession-a-glory-or-a-misery">Here</a><br></dd><br>
+                    darker. <br> You can read the story of <a href="https://www.wattpad.com/story/395064563-obsession-a-glory-or-a-misery">Obsession</a><br>
+                    </dd><br>
+                    </figure>
                 Here is a comparison between Obsession- A Glory or A Misery and Gillian Flynn's Gone Girl</b>
                 </ol></dl>
                 <table border="1" cellpadding="10" cellspacing="0">
@@ -225,9 +324,16 @@
                 <p><b>I took inspiration from Eminem in making songs. The first time I heard the song <q>Rap God</q>, I want to rap fast as well with depth meaning so <br><br>Here are a few songs made:</b></p>
                 <ol><dl>
                     <li><dt><h4>Acceleration</h4></dt></li>
+                    <figure class="image-right-container">
+                        <a href="https://www.bandlab.com/embed/?id=40f0936d-eb03-f011-aaa7-0022484892d6">
+                            <img src="Assets/Images/mqdefault.jpg" alt="Image of the song 'Acceleration'" class="image-right">
+                        </a>
                     <dd><p><b><mark>Acceleration</mark> is a high-octane rap that captures the relentless drive to succeed in a world full
                         of obstacles. With references to speed, gaming, and real-world systems like government and education, it’s both
-                        a personal anthem and a critique of societal structures holding people back. It is a sequel to one my songs titled <q>Rap King</q></b></p></dd><br>
+                        a personal anthem and a critique of societal structures holding people back. It is a sequel to one of my songs titled <q>Rap King</q></b></p></dd><br>
+                    </figure>
+                    <iframe width="560" height="202" src="https://www.bandlab.com/embed/?id=40f0936d-eb03-f011-aaa7-0022484892d6"
+                        allowfullscreen>Acceleration</iframe><br><br>
                         <b>
                             Here is a song comparison between Acceleration and Eminem's Rap God
                         </b>
@@ -321,38 +427,81 @@
                     <li><dt><h4>Odd Man Out</h4></dt></li>
                     <dd><p><b><mark> Odd Man Out</mark> dives deep into themes of discrimination, isolation, and the pain of being different
                         in a divided world. Through vivid references to global conflict and identity struggles, the song becomes a voice
-                        for those left on the margins.</b></p></dd>
+                        for those left on the margins.</b></p></dd><br>
+                        <iframe width="560" height="202" src="https://www.bandlab.com/embed/?id=13627284-56c3-ef11-88cd-6045bd345b20"
+                            allowfullscreen></iframe>
                 <li><dt><h4>One Shot Of The Glory or One Shot Of The Misery</h4></dt></li>
                    <dd><p><b><mark>One Shot of the Glory or One Shot of the Misery</mark> explores the fragile line between success and
                         downfall. Inspired by real emotion and dramatic storytelling, it presents a tragic tale of a fan’s obsession,
                         later expanded into the story "Obsession."</b></p></dd> 
+                        <img src="" aria-placeholder="Image of 'One Shot of The Glory or One Shot of The Misery'" width="560" height="202"><br><small><b>(Song not released yet)</b></small>
                 <li><dt><h4>I am the one</h4></dt></li>
                    <dd> <p><b><mark>I am the one</mark> celebrates unity and support among close friends. Namedrops like Rithvik
                         Shetty, Rithwik Reddy, Arnav, and Sai Teja give it a personal, heartfelt edge. It’s about overcoming struggles
                         together, no matter the odds.</b></p></dd>
-                 <li><dt><h4>When Things are Unnecessary</h4></dt></li>       
+                        <iframe width="560" height="202" src="https://www.bandlab.com/embed/?id=3b96da0e-caba-ef11-88cd-6045bd345b20"
+                            allowfullscreen></iframe>
+                 <li><dt><h4>When Things are Unnecessary</h4></dt></li> 
+                    <figure class="image-right-container">
+                        <a href="https://www.bandlab.com/embed/?id=d5108452-9205-f011-aaa7-0022484892d6">
+                            <img src="Assets/Images/When things are Unnecessary.png" alt="Image of 'When Things are Unnecessary'" class="image-right">
+                        </a>  
                        <dd> <p><b><mark>When Things are Unnecessary</mark> unleashes sharp wordplay and powerful metaphors targeting rivals
                             Harsha and Royal Rithvik. Through clever name flips, nature-based imagery, and lyrical dominance, the track
                             dismantles their ego while affirming Rakshith’s lyrical strength and the unstoppable force of his allies.</b></p></dd>
-                        </dl></ol>
+                        
+                    </figure>  
+                        <iframe width="560" height="202" src="https://www.bandlab.com/embed/?id=d5108452-9205-f011-aaa7-0022484892d6"
+                            allowfullscreen></iframe>
+                    </dl></ol>
                 </section>
                 <section id="Appearances">
                     <h2>Appearances</h2>
                     <p>
-                        <b>I had Appeared in two other channels</b> 
+                        <b>Looking back at what I wrote, I did have that urge to be on <q>Some Other Channel</q>. I like Cameo appearances in the movies and I got an opportunity with the first person, <q>Rithvik Shetty</q> and his channel <a href="https://www.youtube.com/channel/UCRQe4evsXFZVZSIhWkLIZwQ">Royal Rithvik</a>. I had Appeared in three of other people's channels</b> 
                         <ol><dl>
+                            <li><dt><h4>Royal Rithvik</h4></dt></li>
+                            <div class="tabss">
+                                <div class="tab active" onclick="showTab('Royal Rithvik Image')">Channel Logo</div>
+                                <div class="tab" onclick="showTab('Royal Rithvik')">Channel Founder</div>
+                                <!-- Add more tabs as needed -->
+                            </div>
+                            
+                            <div id="Royal Rithvik Image" class="content active">
+                                <div class="images">
+                                    <div>
+                                        <img class="image" src="Ra-Ri Channel/channels2_profile.jpg" alt="Royal Rithvik Image" />
+                                        <div class="caption">Royal Rithvik</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div id="Royal Rithvik" class="content">
+                                <div class="images">
+                                    <div>
+                                        <img class="image" src="Ra-Ri Channel/WhatsApp Image 2025-05-16 at 17.48.34_00afee62.jpg" alt="Image of Rakshith and Rithvik Shetty" />
+                                        <div class="caption">Rakshith(left) and Rithvik Shetty(right and the Founder) along with Sai Teja(middle)</div>
+                                    </div>
+                                </div>  
+                            </div>
+                           <br><br> 
+                            <dd><b><mark>Royal Rithvik</mark> is a budding content creator on YouTube who shares a mix of gaming and lifestyle vlogs. With
+                            a casual
+                            and engaging style, he invites viewers into his everyday adventures, blending entertainment with a personal touch <br><br>
+                            The first appearance is in the video <a href="https://youtube.com/shorts/bmiyv2pwB-w?feature=shared"><q>making lemon soda at home</q></a>, where Rithvika and Rithvik make Lemon Soda and serve it. It is filled with Humor</b></dd>
+
                             <li><dt><h4>Akshara International School Hyderabad</h4></dt></li>
-                            <dd><b>In a short named as <q>CBSE SAFAL online mock exam Akshara International School Hyderabad</q>, I am sitting at the first row doing a mock test for SAFAL. This is the first video where I have appeared overall<br>
-                            You can see the video  <a href="https://youtube.com/shorts/P0MhEWJz7nA?feature=shared">Here</a> <br>
+                            <dd><b>In a short named as <q>CBSE SAFAL online mock exam Akshara International School Hyderabad</q>, I am sitting at the first row doing a mock test for SAFAL. This is the first group channel video where I have appeared <br>
+                            You can see the <a href="https://youtube.com/shorts/P0MhEWJz7nA?feature=shared">video</a> <br>
                             <br>
-                            Another video, Although not released by the channel itself, is the <q>10th class Farewell Dance by 9th Grade</q>. I had appeared as a Cameo appearance, holding and giving the Chairman's Cup
-                            You can see the video <a href="https://youtu.be/5Pacu4SC78s">Here</a>
+                            Another video, Although not released by the channel itself, is the <q>10th class Farewell Dance by 9th Grade</q>. I had appeared as a Cameo appearance, holding and giving the Chairman's Cup. <br>
+                            You can see the <a href="https://youtu.be/5Pacu4SC78s">video</a>
                             <br><br>
-                            You can visit their channel <a href="http://www.youtube.com/@Aksharainternational">Here</a></b></dd>
+                            You can visit their channel <a href="http://www.youtube.com/@Aksharainternational">Akshara International School</a></b></dd>
                         <li><dt><h4>Sakshi Education</h4></dt></li>
-                        <dd><b>In the video <q>Sakshi Math Bee 2023-24 | Category - 4 | Telangana | Sakshi Education | Math Formulas</q>, I appeared as a contest no. 4 in the final. In that final I won the first round and sadly lost the second round <br>
-                        You can see the video <a href="https://www.youtube.com/live/tCtVDvPsI2g?feature=shared">Here</a><br><br>
-                    You can visit the channel <a href="http://www.youtube.com/@SakshiBhavita">Here</a></b></dd>
+                        <dd><b>In the video <q>Sakshi Math Bee 2023-24 | Category - 4 | Telangana | Sakshi Education | Math Formulas</q>, I appeared as a contest no. 4 in the final. In that final I won the first round and sadly lost the second round. <br>
+                        You can see the <a href="https://www.youtube.com/live/tCtVDvPsI2g?feature=shared">video</a><br><br>
+                    You can visit the channel <a href="http://www.youtube.com/@SakshiBhavita">Sakshi Education</a></b></dd>
                     </ol></dl>
                     </p>
                 </section>
