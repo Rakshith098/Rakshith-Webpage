@@ -114,6 +114,7 @@ q
     font-family: "Merriweather", serif;
         font-style: italic;
         color: white;
+        font-size: larger;
 }
 
 .project-list li {
@@ -177,3 +178,7 @@ footer {
     gap: 50px;
     align-items: center;
 }
+a:hover
+ {
+    color: rgb(105, 184, 246);
+ }
