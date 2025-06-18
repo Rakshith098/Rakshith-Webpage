@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rakshith's Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(Black, rgb(35, 35, 35), Black);
+            color: #fff;
+            margin: 2px;
+            text-align: justify;
+        }
+
+        header {
+            text-align: center;
+            background-color: #000;
+            padding: 40px 20px;
+            border-top: 2px solid #c00;
+            border-bottom: 2px solid #c00;
+        }
+
+        header b {
+            color: #eee;
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        .nav-item {
+            text-decoration: none;
+            color: #f55;
+            padding: 0 15px;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .image-a {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .image-a img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        section aside {
+            color: #f44;
+            margin-bottom: 20px;
+            text-decoration: solid 2px #f44;
+        }
+
+        h2 {
+            color: #f44;
+            margin-bottom: 20px;
+            text-decoration: solid 2px #f44;
+        }
+
+        section h3 {
+            color: #c00;
+        }
+
+        section dt h4,
+        legend {
+            color: brown;
+            font-size: 20px;
+        }
+
+        strong {
+            color: rgb(215, 58, 58);
+            text-decoration: underline;
+            text-decoration-color: orange;
+        }
+
+        a,
+        a q {
+            color: #c00;
+            text-decoration: none;
+        }
+
+        q {
+            font-family: "Merriweather", serif;
+            font-style: italic;
+            color: white;
+            font-size: larger;
+        }
+
+        .project-list li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #000;
+            color: #888;
+            border-top: 1px solid #333;
+        }
+
+        .image-right-container {
+            overflow: hidden;
+        }
+
+        .image-right {
+            float: right;
+            margin-left: 15px;
+            width: 200px;
+        }
+
+        .tabs,
+        .tabss {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            padding: 10px 15px;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+        }
+
+        .tab.active {
+            border-color: green;
+            font-weight: bold;
+        }
+
+        .content {
+            display: none;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        .image {
+            width: 200px;
+            image-rendering: pixelated;
+        }
+
+        .caption {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .images {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+
+        a:hover {
+            color: rgb(105, 184, 246);
+        }
+
+        /* Dropdown container */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #444;
+            min-width: 160px;
+            z-index: 1;
+            top: 100%;
+            left: 0;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #555;
+        }
+
+        /* Show the dropdown on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <b>Rakshith's Portfolio</b>
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">About me</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#Projects" id="navbarDropdownMenuLink"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    My Projects
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#Youtube">Youtube</a></li>
+                                    <li><a class="dropdown-item" href="#Instagram">Instagram</a></li>
+                                    <li><a class="dropdown-item" href="#Stories">Stories</a></li>
+                                    <li><a class="dropdown-item" href="#Songs">Few Songs</a></li>
+                                    <li><a class="dropdown-item" href="#Skits">Skits, short movies</a></li>
+                                    <li><a class="dropdown-item" href="#Games">Games</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#Appearances">Appearances</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#Contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <article>
+                <section id="about" class="py-5">
+                    <h2>About me</h2>
+                    <div class="row image-a align-items-center">
+                        <div class="col-md-4">
+                            <img src="Assets/Images/Image of Rakshith.jpg" alt="Image of Rakshith" class="img rounded">
+                    </div>
+                            <p>
+                                <b>Hey! I'm Rakshith --- a creative all-rounder with a passion for both the arts and
+                                    technology. Whether it's rapping a
+                                    rock tune, dancing to a beat, sketching vibrant art, or acting in front of the
+                                    camera,
+                                    I thrive on expression and
+                                    storytelling. I also love directing projects and editing various projects,
+                                    especially
+                                    when I get to bring my vision to life with a talented team of
+                                    collaborators.
+                                    <br><br>
+                                    Beyond the creative side, I'm a big fan of gaming (you'll find me in Minecraft as
+                                    RKFyter), cooking up delicious dishes, playing sports like Cricket and Basketball
+                                    and writing code to build cool websites and apps. I believe in combining fun,
+                                    passion,
+                                    and skill in everything I do.
+                                    <br><br>
+                                    Together with my collaborators, I aim to create experiences that leave a mark ---
+                                    whether on a stage, a screen, or a server
+                                </b>
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="Projects" class="py-5">
+                    <h2>My Projects</h2><small>*(All images and red text, <small>(except headings)</small> are links to
+                        other
+                        websites)</small>
+
+                    <p>
+                    <ul id="project-list">
+                        <b> Every Project I made has a story behind it like how it started, how had it become,
+                            description
+                            of it. I will say out the story behind it</b><br><br>
+                        <li>
+                            <h3 id="Youtube">Youtube</h3>
+                            <b> I have two channels featured in youtube, they are Ra-Ri Channel and Ra-Ri Clips <br><br>
+                                Out of all the Projects, I feel like Youtube is the biggest one. <br><br>
+                                It all started in 4th grade when I said, <q>I want to make a Youtube Channel</q> where
+                                my
+                                mother replied,<q>Ok, but what content will you feature in there?</q><br>
+                                Then in 6th grade, just before August 2021, I made a video called,<a
+                                    href="https://youtu.be/jIgEpIKc44E?feature=shared">"Nutritious Milkshake"</a> for a
+                                school project. But to send it there, Whatsapp will be a difficult option and so, my
+                                father helped me release that video on my mother's account. Then my father found out
+                                that
+                                all the entertaining videos can be sent to youtube as memories and thus <u>Ra-Ri
+                                    Channel</u> is born. <br>
+                                The logo and channel was created by my father<br><br>
+                                The first idea I thought to do was teaching Science. But then all changed to just simple
+                                and short videos of Arts and Crafts and Vlogs <br><br>
+                                While Ra-Ri clips is a later channel, just used temporarily before it is shut down.
+                            </b><br><br>
+                        </li>
+                        <ol>
+                            <dl>
+                                <li>
+                                    <dt>
+                                        <h4>
+                                            Ra-Ri Channel
+                                        </h4>
+                                    </dt>
+                                </li>
+
+                                <div class="tabs">
+                                    <div class="tab active" onclick="showTab('Ra-Ri Channel Image')">Channel Logo</div>
+                                    <div class="tab" onclick="showTab('Siblings')">Channel Founders</div>
+                                    <!-- Add more tabs as needed -->
+                                </div>
+
+                                <div id="Ra-Ri Channel Image" class="content active">
+                                    <div class="images">
+                                        <div>
+                                            <a href="https://youtube.com/@rarichannel098?feature=shared"><img
+                                                    class="image" src="Assets/Images/channels4_profile.jpg"
+                                                    alt="Ra-Ri Channel Image" /></a>
+                                            <div class="caption">Ra-Ri Channel</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="Siblings" class="content">
+                                    <div class="images">
+                                        <div>
+                                            <img class="image" src="Assets/Images/Siblings.jpg"
+                                                alt="Image of Rakshith and Rithu" />
+                                            <div class="caption">Rakshith and Rithvika</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script>
+                                    function showTab(id) {
+                                        document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+                                        document.querySelectorAll('.content').forEach(content => content.classList.remove('active'));
+                                        document.querySelector(`.tab[onclick="showTab('${id}')"]`).classList.add('active');
+                                        document.getElementById(id).classList.add('active');
+                                    }
+                                </script>
+                                <br><br>
+                                <dd>
+                                    <b>The <mark>Ra-Ri Channel</mark> is a YouTube platform created by siblings Rakshith
+                                        and
+                                        Rithvika, launched on August 6, 2021. 'Ra' is short for Rakshith and 'Ri' is
+                                        short
+                                        for Rithvika. The
+                                        channel features a diverse range of content, including cooking tutorials, skits,
+                                        dance performances, and vlogs,
+                                        reflecting the duo's creativity and versatility. With 191 subscribers and 221
+                                        videos, the channel offers a glimpse into
+                                        their dynamic and engaging content <br><br>
+                                        Here are a few more types of videos they've posted:
+                                        <ol>
+                                            <li><strong> Cooking tutorials</strong> -- Simple recipes and food
+                                                preparation
+                                                videos.</li>
+
+                                            <li> <strong>Dance performances</strong> -- Choreographed routines by the
+                                                siblings.</li>
+
+                                            <li><strong> Fun skits and short plays </strong>-- family-friendly and often
+                                                humorous.</li>
+
+                                            <li><strong>Festival-themed crafts</strong> -- including Diwali decorations
+                                                and
+                                                Christmas cards.</li>
+                                        </ol><br><br>
+                                        <div class="container my-5">
+                                            <h2 class="mb-4 text-center">Songs from Ra-Ri Channel</h2>
+                                            <div class="table-responsive">
+                                                <table class="table table-bordered table-hover align-middle">
+                                                    <thead class="table-dark">
+                                                        <tr>
+                                                            <th>Title</th>
+                                                            <th>Audio</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">The Old Intro and Outro sounds</th>
+                                                            <td>
+                                                                <audio controls>
+                                                                    <source
+                                                                        src="Assets/Audios/First Intro and Outro.mp3"
+                                                                        type="audio/mp3">
+                                                                    Your browser does not support the audio element.
+                                                                </audio>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Rithu Singing 'Rise Above'</th>
+                                                            <td>
+                                                                <audio controls>
+                                                                    <source src="Assets/Audios/Rise_Above.mp3"
+                                                                        type="audio/mp3">
+                                                                    Your browser does not support the audio element.
+                                                                </audio>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Rakshith rapping 'Is Life a Math Device'
+                                                            </th>
+                                                            <td>
+                                                                <audio controls>
+                                                                    <source
+                                                                        src="Assets/Audios/Is_Life_A_Math_Device.mp3"
+                                                                        type="audio/mp3">
+                                                                    Your browser does not support the audio element.
+                                                                </audio>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        To explore more, you can visit <a
+                                            href="https://youtube.com/@rarichannel098?feature=shared">Ra-Ri Channel</a>
+                                        <br>
+                                        Also to see the webpage, you can press this <a
+                                            href="https://rakshith098.github.io/Ra-Ri-Channel/">Link</a>
+                                </dd>
+
+                                <figure>
+                                    Sample videos below <br>
+                                    </b>
+
+                                    <video autoplay muted height="400px" loop class="img">
+                                        <source src="Assets/Videos/Eating Belgian Waffle at Punjagutta.mp4"
+                                            type="video/mp4">
+                                    </video>
+
+                                    <video autoplay muted height="400px" loop class="img">
+                                        <source src="Assets/Videos/Making a Sandwich.mp4" type="video/mp4">
+                                    </video>
+
+                                    <video autoplay muted height="400px" loop class="img">
+                                        <source
+                                            src="Assets/Videos/Rithu Dance IV  APT song by Rose and Bruno Mars (Most viewed).mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </figure>
+                                <br>
+
+                                <li>
+                                    <dt>
+                                        <h4>
+                                            Ra-Ri Clips
+                                        </h4>
+                                    </dt>
+                                </li>
+                                <figure class="image-right-container">
+                                    <a href="https://www.youtube.com/@rariclips2321"><img
+                                            src="Assets/Images/channels3_profile.jpg" alt="Image of Ra-Ri Clips"
+                                            class="image-right" style="width: 100px;"></a>
+                                    <dd>
+                                        <b>The Ra-Ri Channel has a second YouTube channel called <mark> Ra-Ri
+                                                Clips.</mark> <br>
+                                            This secondary channel is dedicated to showcasing the best clips from their
+                                            main
+                                            videos, providing viewers with short,
+                                            engaging highlights from their original content. It's an excellent way to
+                                            enjoy
+                                            quick moments from their cooking
+                                            tutorials, skits, dance performances, and vlogs <br>
+
+                                            You can explore <a href="https://www.youtube.com/@rariclips2321">Ra-Ri
+                                                Clips</a>
+                                    </dd>
+                                </figure>
+                            </dl>
+                            <figure>
+                                Sample videos below <br>
+                                </b>
+
+                                <video autoplay muted height="400px" loop class="img">
+                                    <source src="Assets/Videos/Eating at Balaji Family Dhaba.mp4" type="video/mp4">
+                                </video>
+
+                                <video autoplay muted height="400px" loop class="img">
+                                    <source src="Assets/Videos/This Water Slide is fun!!!.mp4" type="video/mp4">
+                                </video>
+
+                                <video autoplay muted height="400px" loop class="img">
+                                    <source src="Assets/Videos/When you win all Olympiad and get 1 million rupees.mp4"
+                                        type="video/mp4">
+                                </video>
+                            </figure>
+                        </ol>
+                        </p>
+
+                        <li>
+                            <h3 id="Instagram">Instagram</h3>
+                        </li>
+
+                        <figure class="image-right-container">
+                            <a href="https://www.instagram.com/rakrithu_s_04/"><img
+                                    src="Assets/Images/Instagram Image.jpg" alt="Image of the username in Instagram"
+                                    class="image-right" height="200px"></a>
+
+                            <b>Ok, Instagram is like <a href="https://en.wikipedia.org/wiki/YouTube">Youtube</a> but
+                                with photos
+                                for me. <br><br>
+
+                                During the New year of 2023, My fellow classmates asked for our <q>Instagram ids</q> to
+                                write
+                                on the board. I dont have one, so they created a fake id, <u>rakshith_s_04</u>. After
+                                the New
+                                year. I made my Instagram account to make it like I have it. It features
+                                behind-the-scenes
+                                glimpses, personal updates, creative content, and clips tied to the YouTube activities,
+                                including arts, crafts, and performances. Instead of Rakshith, I used <u>rakrithu</u>,
+                                the
+                                portmanteau of Rakshith and Rithvika in the username
+                                <br>
+                                You can check out the profile <a
+                                    href="https://www.instagram.com/rakrithu_s_04/">@rakrithu_s_04</a> on Instagram </b>
+                        </figure>
+                        <figure>
+                            <b>Sample Images below</b><br>
+                            <a
+                                href="https://www.instagram.com/p/DH00eHyIG7b/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
+                                <img src="Assets/Images/Instagram1.png" alt="Image by Achi Bhai!" height="400px"
+                                    class="img">
+                            </a>
+                            <a
+                                href="https://www.instagram.com/p/C1gYIZorDkt/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
+                                <img src="Assets/Images/Instagram2.png" alt="Image of the Plants!" height="400px"
+                                    class="img">
+                            </a>
+                        </figure>
+
+                        <li>
+                            <h3 id="Stories">Stories</h3>
+                        </li>
+                        <p><b>When I read the stories of Sudha Murthy and Ruskin Bond, I decided to write stories as
+                                well,
+                                although I made only two stories. My thought is <q>To not only read stories and make
+                                    one</q></b>
+                        </p>
+                        <ol>
+                            <dl>
+                                <li>
+                                    <dt>
+                                        <h4>The Rubix Magician- The Full story</h4>
+                                    </dt>
+                                </li>
+                                <figure class="image-right-container">
+                                    <a href="https://www.wattpad.com/story/316352304-rubik%27s-magician-the-full-story">
+                                        <img src="Assets/Images/Rubix Magician.jpg" alt="Image of the Rubix magician" style="width: 100px;"
+                                            class="image-right">
+                                    </a>
+                                    <dd><b><mark>Rubix Magician</mark> is an epic story blending historical conflict,
+                                            supernatural powers, and modern
+                                            heroism. <br> It follows Ravi, a gifted Rubik's Cube prodigy known as the
+                                            Rubik's
+                                            Magician, who discovers mysterious
+                                            powers after saving a championship from terrorists. Meanwhile, Amora, the
+                                            reincarnation of a fallen British warrior
+                                            seeking revenge, wages war against India. With the help of his possessed
+                                            arm,
+                                            housing the spirit of his late friend
+                                            Teju, Ravi embarks on a quest to retrieve three mystical artifacts and stop
+                                            the dark
+                                            forces threatening his country. <br>
+                                            The story explores themes of legacy, sacrifice, and the battle between good
+                                            and evil
+                                            across generations. <br>
+                                            You can read the entire story of <a
+                                                href="https://www.wattpad.com/story/316352304-rubik%27s-magician-the-full-story">Rubix
+                                                Magician</a>
+                                        </b>
+                                    </dd>
+                                </figure>
+                                <li>
+                                    <dt>
+                                        <h4>Obsession- A Glory or A Misery</h4>
+                                    </dt>
+                                </li>
+                                <figure class="image-right-container">
+                                    <a href="https://www.wattpad.com/story/395064563-obsession-a-glory-or-a-misery">
+                                        <img src="Assets/Images/Obsession.png" alt="Image of Obsession"
+                                            class="image-right" style="width: 100px;">
+                                    </a>
+                                    <dd><b><mark>Obsession</mark> is not just a story---it's a descent. A fan writes
+                                            letters to
+                                            his idol, seeking recognition,
+                                            comfort, and connection. But with each word, his mind fractures, his
+                                            admiration
+                                            curdles into fixation. When the final
+                                            letter arrives, soaked in desperation and silence, a chilling truth emerges.
+                                            The
+                                            idol, Ramant, must face a twisted past,
+                                            a betrayal that runs deeper than fame---and a revenge that refuses to stay
+                                            buried.
+                                            Behind the spotlight lies something
+                                            darker. <br> You can read the story of <a
+                                                href="https://www.wattpad.com/story/395064563-obsession-a-glory-or-a-misery">Obsession</a><br>
+                                    </dd><br>
+                                </figure>
+                                Here is a comparison between Obsession- A Glory or A Misery and Gillian Flynn's Gone
+                                Girl
+                        </ol>
+                        </dl>
+                        <div class="container my-5">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped table-hover align-middle">
+                                    <thead class="table-dark text-center">
+                                        <tr>
+                                            <th>Aspect</th>
+                                            <th>Obsession: A Glory or A Misery</th>
+                                            <th>Gone Girl</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Genre</strong></td>
+                                            <td>Psychological Thriller, Tragedy, Sports Drama</td>
+                                            <td>Psychological Thriller, Mystery, Domestic Noir</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Main Conflict</strong></td>
+                                            <td>Fan obsession turns fatal; hero is wrongly blamed</td>
+                                            <td>Wife disappears, husband is blamed; deeper manipulation unfolds</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Plot Twists</strong></td>
+                                            <td>Friends secretly murder the fan; memory loss and betrayal revealed</td>
+                                            <td>Amy fakes her disappearance; manipulates media and everyone around her
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Main Characters</strong></td>
+                                            <td>Ramant, Rafhal, Aniska, Teju, Varshal</td>
+                                            <td>Nick Dunne, Amy Dunne</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Protagonist's Journey</strong></td>
+                                            <td>From guilt and confusion to truth and justice</td>
+                                            <td>From confusion and victimhood to fear and control</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Antagonist(s)</strong></td>
+                                            <td>Jealous friends posing as loyal companions</td>
+                                            <td>Amy -- calculating and psychologically dominant</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Emotional Tone</strong></td>
+                                            <td>Tragic, emotional, redemptive</td>
+                                            <td>Cynical, twisted, intense</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Psychological Depth</strong></td>
+                                            <td>Explores guilt, obsession, loyalty, and justice</td>
+                                            <td>Explores narcissism, manipulation, media impact</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Social Commentary</strong></td>
+                                            <td>Fame, mental health, blind admiration</td>
+                                            <td>Marriage, media bias, gender roles</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Ending</strong></td>
+                                            <td>Justice is served; bittersweet tribute to Rafhal</td>
+                                            <td>Dark compromise; toxic marriage continues</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Message</strong></td>
+                                            <td>Truth may take time, but it rises --- glory is earned</td>
+                                            <td>Truth is not always valued; perception controls reality</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <li>
+                            <h3 id="Songs">Few Songs</h3>
+                        </li>
+                        <p><b>I took inspiration from Eminem in making songs. The first time I heard the song <q>Rap
+                                    God</q>, I
+                                want to rap fast as well with depth meaning so <br><br>Here are a few songs made:</b>
+                        </p>
+                        <ol>
+                            <dl>
+                                <li>
+                                    <dt>
+                                        <h4>Acceleration</h4>
+                                    </dt>
+                                </li>
+                                <figure class="image-right-container">
+                                    <a href="https://www.bandlab.com/embed/?id=40f0936d-eb03-f011-aaa7-0022484892d6">
+                                        <img src="Assets/Images/Acceleration.jpg" alt="Image of the song 'Acceleration'"
+                                            class="image-right">
+                                    </a>
+                                    <dd>
+                                        <p><b><mark>Acceleration</mark> is a high-octane rap that captures the
+                                                relentless drive
+                                                to succeed in a world full
+                                                of obstacles. With references to speed, gaming, and real-world systems
+                                                like
+                                                government and education, it's both
+                                                a personal anthem and a critique of societal structures holding people
+                                                back. It is
+                                                a sequel to one of my songs titled <q>Rap King</q></b></p>
+                                    </dd><br>
+                                </figure>
+                                <iframe src="https://www.bandlab.com/embed/?id=40f0936d-eb03-f011-aaa7-0022484892d6"
+                                    allowfullscreen class="w-100">Acceleration</iframe><br><br>
+                                <b>
+                                    Here is a song comparison between Acceleration and Eminem's Rap God
+                                </b>
+                                <div class="container my-5">
+                                    <h2 class="mb-4 text-center">Comparison: <em>Acceleration</em> vs <em>Rap God</em>
+                                    </h2>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-hover align-middle">
+                                            <thead class="table-dark text-center">
+                                                <tr>
+                                                    <th>Aspect</th>
+                                                    <th>Acceleration</th>
+                                                    <th>Rap God</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><strong>Main Theme</strong></td>
+                                                    <td>Speed, ambition, self-growth, rebellion, tech/culture</td>
+                                                    <td>Superiority, lyrical dominance, hip-hop evolution</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Sub-Themes</strong></td>
+                                                    <td>Critique of society, government, education, gaming</td>
+                                                    <td>References to rap history, internet culture</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Tone</strong></td>
+                                                    <td>Bold, determined, rebellious</td>
+                                                    <td>Arrogant, aggressive, confident</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Flow</strong></td>
+                                                    <td>Energetic, aggressive, with occasional switches</td>
+                                                    <td>Highly dynamic, multi-syllabic, fast and fluid</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Speed</strong></td>
+                                                    <td>Fast-paced with bursts of intensity</td>
+                                                    <td>Guinness-record-speed fast in mid-verse</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Switch-ups</strong></td>
+                                                    <td>Moderate---used for emphasis or transition</td>
+                                                    <td>Frequent---displays control over rhythm and speed</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Wordplay</strong></td>
+                                                    <td>Creative metaphors, modern references (gaming, AI)</td>
+                                                    <td>Advanced rhyme schemes, puns, internal rhymes</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Vocabulary</strong></td>
+                                                    <td>Modern, relatable, sometimes cryptic</td>
+                                                    <td>Dense, intellectual, tongue-twisting</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Punchlines</strong></td>
+                                                    <td>Hits with attitude and clarity</td>
+                                                    <td>Overloaded with lines that double as flexes</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Emotion</strong></td>
+                                                    <td>Urgency, rebellion, fire</td>
+                                                    <td>Ego, humor, ferocity</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Vocal Delivery</strong></td>
+                                                    <td>Rapid and powerful, but more emotional</td>
+                                                    <td>Controlled chaos, flows like a machine</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Engagement</strong></td>
+                                                    <td>Invokes connection with the listener</td>
+                                                    <td>Demands awe from the listener</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Audience</strong></td>
+                                                    <td>Gen-Z, gamers, students, rebels</td>
+                                                    <td>Mainstream rap fans, hip-hop heads</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Message</strong></td>
+                                                    <td>"Don't follow rules---create your own path"</td>
+                                                    <td>"I'm untouchable---rap is mine to dominate"</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Legacy</strong></td>
+                                                    <td>Original and evolving (my creative voice)</td>
+                                                    <td>Historical---one of Eminem's most iconic achievements</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <li>
+                                    <dt>
+                                        <h4>Odd Man Out</h4>
+                                    </dt>
+                                </li>
+                                <dd>
+                                    <p><b><mark> Odd Man Out</mark> dives deep into themes of discrimination, isolation,
+                                            and the
+                                            pain of being different
+                                            in a divided world. Through vivid references to global conflict and identity
+                                            struggles, the song becomes a voice
+                                            for those left on the margins.</b></p>
+                                </dd><br>
+                                <iframe src="https://www.bandlab.com/embed/?id=13627284-56c3-ef11-88cd-6045bd345b20"
+                                    allowfullscreen class="w-100"></iframe>
+                                <li>
+                                    <dt>
+                                        <h4>One Shot Of The Glory or One Shot Of The Misery</h4>
+                                    </dt>
+                                </li>
+                                <dd>
+                                    <p><b><mark>One Shot of the Glory or One Shot of the Misery</mark> explores the
+                                            fragile line
+                                            between success and
+                                            downfall. Inspired by real emotion and dramatic storytelling, it presents a
+                                            tragic
+                                            tale of a fan's obsession,
+                                            later expanded into the story "Obsession."</b></p>
+                                </dd>
+                                <iframe src="https://www.bandlab.com/embed/?id=06fd41a3-d13e-f011-a5f1-6045bd2f3017"
+                                    allowfullscreen class="w-100"></iframe>
+                                <li>
+                                    <dt>
+                                        <h4>I am the one</h4>
+                                    </dt>
+                                </li>
+                                <dd>
+                                    <p><b><mark>I am the one</mark> celebrates unity and support among close friends.
+                                            Namedrops
+                                            like Rithvik
+                                            Shetty, Rithwik Reddy, Arnav, and Sai Teja give it a personal, heartfelt
+                                            edge. It's
+                                            about overcoming struggles
+                                            together, no matter the odds.</b></p>
+                                </dd>
+                                <iframe src="https://www.bandlab.com/embed/?id=3b96da0e-caba-ef11-88cd-6045bd345b20"
+                                    allowfullscreen class="w-100"></iframe>
+                                <li>
+                                    <dt>
+                                        <h4>When Things are Unnecessary</h4>
+                                    </dt>
+                                </li>
+                                <figure class="image-right-container">
+                                    <a href="https://www.bandlab.com/embed/?id=d5108452-9205-f011-aaa7-0022484892d6">
+                                        <img src="Assets/Images/When things are Unnecessary.png"
+                                            alt="Image of 'When Things are Unnecessary'" class="image-right">
+                                    </a>
+                                    <dd>
+                                        <p><b><mark>When Things are Unnecessary</mark> unleashes sharp wordplay and
+                                                powerful
+                                                metaphors targeting rivals
+                                                Harsha and Royal Rithvik. Through clever name flips, nature-based
+                                                imagery, and
+                                                lyrical dominance, the track
+                                                dismantles their ego while affirming Rakshith's lyrical strength and the
+                                                unstoppable force of his allies.</b></p>
+                                    </dd>
+
+                                </figure>
+                                <iframe src="https://www.bandlab.com/embed/?id=d5108452-9205-f011-aaa7-0022484892d6"
+                                    allowfullscreen class="w-100"></iframe>
+                                <br><br>
+                                <b>To hear more songs made by me, listen in <a
+                                        href="https://www.bandlab.com/the_rari_band">BandLab</a></b>
+                        </ol>
+                        </dl>
+
+                        <li>
+                            <h3 id="Skits">Skits, Short movies</h3>
+                        </li>
+                        <b>Considering that I can do Directing, acting and Editing, There is a chance I can do a Lot of
+                            skits and short movies but I didn't do so many of them. <br>
+                            I had an opportunity but I didn't get to do it. It is a dual actor action movie which is 1
+                            hour,
+                            <small>(planned)</small> and has more fighting and all, titled <br> <q
+                                style="font-size: x-large;">7:11
+                                pm</q>. The opportunity did not happen because of lack of time and resources. <br><br>
+                            I did one skit and one short movie as directing and three skits as acting,<small> although
+                                two skits
+                                are the same topic</small>, in total.</b>
+                        <dl>
+                            <ol>
+                                <li>
+                                    <dt>
+                                        <h4>
+                                            Ramanujan Skit - 2023, 2024
+                                        </h4>
+                                    </dt>
+                                </li>
+                                <dd>
+                                    <b>
+                                        During Mathematics day in 2023, I want to join in a mathematical skit because I
+                                        love
+                                        maths. My role give is the main character,<u><q>Ramanujan</q></u>. <br>That
+                                        time, Arnav is
+                                        the director and editor. I was also given the opportunity as a grammar checker
+                                        for the
+                                        script because the narrator has to read out correctly. The video doesn't show
+                                        the full
+                                        release but the part of the skit. <br><br>
+                                        You can watch the <a href="https://youtu.be/WPMqeKVVZSA">Video</a><br>
+                                        <a href="https://youtu.be/WPMqeKVVZSA"><img src="Assets/Images/Ramanujan.png"
+                                                alt="Image of the Ramanujan Skit 2023" class="img"></a>
+                                        <br><br>
+                                        Then after an year, that is, Mathematics day 2024, Arnav and others from last
+                                        year
+                                        became busy with another project, which is MUN. So that time I got the
+                                        opportunity of
+                                        making another skit, with allowance from my math teacher and principal. <br>
+                                        So, I was the director, with my character role being Ramanujan again. But these
+                                        let to
+                                        few problems. <br>
+                                        First is people, second is it was during revision hour and third is set up and
+                                        script.
+                                        But all went well at the end <br><br>
+                                        Here is the <a href="https://youtu.be/9HJZoQeYM6E">Video</a><br>
+                                    </b>
+                                    <a href="https://youtu.be/9HJZoQeYM6E"><img src="Assets/Images/image.png"
+                                            alt="Image of the Ramanujan Skit 2024" class="img"></a>
+                                </dd>
+                                <li>
+                                    <dt>
+                                        <h4>
+                                            A Game of Horror
+                                        </h4>
+                                    </dt>
+                                </li>
+                                <dd>
+                                    <b>
+                                        A short film of 3 minutes, it contains the song <q>Hide and Seek</q> and also
+                                        the first
+                                        video as a collaboration with Rithvik Shetty. <br>
+                                        This short movie shows Rithvik entering the random house and Rithu attacking
+                                        him, where
+                                        he dies, playing as a deadly hide and seek. <br><br>
+                                        The movie can be <a href="https://youtu.be/EwtcMUs99ME">watched</a><br>
+                                        <a href="https://youtu.be/EwtcMUs99ME"><img
+                                                src="Assets/Images/Game of Horror.png" alt="Game of Horror"
+                                                height="200px" class="img"></a>
+                                    </b>
+                                </dd>
+                                <li>
+                                    <dt>
+                                        <h4>
+                                            Guru Nanak Skit
+                                        </h4>
+                                    </dt>
+                                </li>
+                                <dd>
+                                    <b>
+                                        It is the only skit which doesn't have video referencing but has a photo proof
+                                        of the
+                                        skit. Happened on Guru Nanak Jayanthi 2023, I was assigned as Guru Nanak. The
+                                        dialogs
+                                        played well but the turban is the only problem because no one can tie a turban.
+                                        <br>
+                                        <br> Photo proof <br>
+                                        <img src="Assets/Images/Guru Nanak.png" alt="Guru Nanak Image of Rakshith"
+                                            class="img">
+                                    </b>
+                                </dd>
+                            </ol>
+                        </dl>
+                        <section>
+                            <li>
+                                <h3 id="Games">Games</h3>
+                            </li>
+                            <b>Dont get me wrong but everyone love some game or other. Like I love playing Minecraft.
+                                Along with
+                                that, I have love to try making a video game. So I actually tried to make one but the
+                                problem
+                                is with the Assets and code, Two very important things for making a video game. I have
+                                no
+                                Prior knowledge in C# and also have no idea how to making assets and the assets in Unity
+                                store
+                                is quite expensive. So I didn't make a game... of that category</b>
+                            <ul>
+                                <dl>
+                                    <li>
+                                        <dt>
+                                            <h4>
+                                                Three Nights at Rithu's Hotel
+                                            </h4>
+                                        </dt>
+                                    </li>
+                                    <dd>
+                                        <b>
+                                            'Three Nights at Rithu's Hotel' is the only game, I made without any game
+                                            engine
+                                            and only using youtube. <br>
+                                            The game features you going into someone's Hotel for a job to see for each
+                                            day,
+                                            changes occur and It become decision making to make a choice. It is the use
+                                            of the
+                                            end screens for every video when the game is made. Like once a scene is
+                                            done, the
+                                            end will show two screens, which is your choice to pick. <br>
+                                            The game is quite rageful because there are no checkpoints. Once died, back
+                                            to
+                                            start <br>
+                                            <br>
+                                            You can play the <a href="https://youtu.be/Z6p8oRhP9TM">game</a> as well
+                                            <br>
+                                        </b>
+                                        <a href="https://youtu.be/Z6p8oRhP9TM"><img
+                                                src="Assets/Images/Three Nights at Rithus Hotel.jpg"
+                                                alt="Three Nights at Rithu's Hotel" class="img" height="300px"></a>
+                                    </dd>
+                                </dl>
+                            </ul>
+                        </section>
+                </section>
+                <section id="Appearances" class="py-5">
+                    <h2>Appearances</h2>
+                    <p>
+                        <b>Looking back at what I wrote, I did have that urge to be on <q>Some Other Channel</q>. I like
+                            Cameo appearances in the movies and I got an opportunity with the first person, <q>Rithvik
+                                Shetty</q> and his channel <a
+                                href="https://www.youtube.com/channel/UCRQe4evsXFZVZSIhWkLIZwQ">Royal Rithvik</a>. I had
+                            Appeared in three of other people's channels</b>
+                    <ol>
+                        <dl>
+                            <li>
+                                <dt>
+                                    <h4>Royal Rithvik</h4>
+                                </dt>
+                            </li>
+                            <div class="tabss">
+                                <div class="tab active" onclick="showTab('Royal Rithvik Image')">Channel Logo</div>
+                                <div class="tab" onclick="showTab('Royal Rithvik')">Channel Founder</div>
+                                <!-- Add more tabs as needed -->
+                            </div>
+
+                            <div id="Royal Rithvik Image" class="content active">
+                                <div class="images">
+                                    <div>
+                                        <a href="https://www.youtube.com/channel/UCRQe4evsXFZVZSIhWkLIZwQ"><img
+                                                class="image" src="Ra-Ri Channel/channels2_profile.jpg"
+                                                alt="Royal Rithvik Image" /></a>
+                                        <div class="caption">Royal Rithvik</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="Royal Rithvik" class="content">
+                                <div class="images">
+                                    <div>
+                                        <img class="image"
+                                            src="Ra-Ri Channel/WhatsApp Image 2025-05-16 at 17.48.34_00afee62.jpg"
+                                            alt="Image of Rakshith and Rithvik Shetty" />
+                                        <div class="caption">Rakshith(left) and Rithvik Shetty(right and the Founder)
+                                            along with Sai Teja(middle)</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br><br>
+                            <dd><b><mark>Royal Rithvik</mark> is a budding content creator on YouTube who shares a mix
+                                    of
+                                    gaming and lifestyle vlogs. With
+                                    a casual
+                                    and engaging style, he invites viewers into his everyday adventures, blending
+                                    entertainment with a personal touch <br><br>
+                                    The first appearance is in the video <a
+                                        href="https://youtube.com/shorts/bmiyv2pwB-w?feature=shared"><q>making lemon
+                                            soda
+                                            at home</q></a>, where Rithvika and Rithvik make Lemon Soda and serve it. It
+                                    is filled with Humor</b><br>
+                                <Video autoplay muted loop height="400px" class="img">
+                                    <Source src="Assets/Videos/Lemon soda.mp4">
+                                    </Source>
+                                </Video>
+                            </dd>
+
+                            <li>
+                                <dt>
+                                    <h4>Akshara International School Hyderabad</h4>
+                                </dt>
+                            </li>
+                            <dd><b>In a short named as <q>CBSE SAFAL online mock exam Akshara International School
+                                        Hyderabad</q>, I am sitting at the first row doing a mock test for SAFAL. This
+                                    is the first group channel video where I have appeared <br>
+                                    You can see the <a
+                                        href="https://youtube.com/shorts/P0MhEWJz7nA?feature=shared">video</a> <br>
+                                    <img src="Assets/Images/SAFAL Exam Appearance.png" alt="My appearance"
+                                        height="400px" class="img">
+                                    <br><br>
+                                    Another video, Although not released by the channel itself, is the <q>10th class
+                                        Farewell Dance by 9th Grade</q>. I had appeared as a Cameo appearance, holding
+                                    and giving the Chairman's Cup. <br>
+                                    You can see the <a href="https://youtu.be/5Pacu4SC78s">video</a><br>
+                                    <img src="Assets/Images/10th Farewell Appearance.png" alt="My Appearance"
+                                        height="300px" class="img">
+                                    <br><br>
+                                    You can visit their channel <a
+                                        href="http://www.youtube.com/@Aksharainternational">Akshara International
+                                        School</a></b></dd>
+                            <li>
+                                <dt>
+                                    <h4>Sakshi Education</h4>
+                                </dt>
+                            </li>
+                            <dd><b>In the video <q>Sakshi Math Bee 2023-24 | Category - 4 | Telangana | Sakshi
+                                        Education | Math Formulas</q>, I appeared as a contest no. 4 in the final. In
+                                    that
+                                    final I won the first round and sadly lost the second round. <br>
+                                    You can see the <a
+                                        href="https://www.youtube.com/live/tCtVDvPsI2g?feature=shared">video</a><br>
+                                    <img src="Assets/Images/Sakshi TV Appearance.png" alt="My Appearance" height="200px"
+                                        class="img"><br><br>
+                                    You can visit the channel <a href="http://www.youtube.com/@SakshiBhavita">Sakshi
+                                        Education</a></b></dd>
+                        </dl>
+                    </ol>
+                    </p>
+                </section>
+            </article>
+            <section id="Contact" class="py-5">
+                <p>
+                <h2>Contact Me</h2>
+                <b>You can message me through this Inbox. Any question, any query, I will respond but keep in mind
+                    <ol>
+                        <li>Linked messages are not read and not accepted</li>
+                        <li>Any scams or rude comments are not appreciated</li>
+                        <li>Don't spam in messages</li>
+                        <li>Give your actual name and E-mail otherwise, messages are not responded</li>
+                    </ol>
+                </b>
+                <fieldset class="border p-3">
+                    <legend class="float-none w-auto p-2">
+                        <b> Inbox Message</b>
+                    </legend>
+                    <form action="https://getform.io/f/adrgrvja" method="POST">
+                        <div class="mb-3">
+                            <label for="FirstName" class="form-label">First Name*</label>
+                            <input type="text" name="First Name" class="form-control" id="FirstName"
+                                placeholder="Example: Smith" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="LastName" class="form-label">Last Name</label>
+                            <input type="text" name="Last Name" class="form-control" id="LastName"
+                                placeholder=" Example: Joe">
+                        </div>
+                        <div class="mb-3">
+                            <label for="Email" class="form-label">E-Mail*</label>
+                            <input type="email" name="E-mail" class="form-control" id="Email"
+                                placeholder="Example: example123@gmail.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="Message" class="form-label">What is your question or query?*</label>
+                            <textarea name="Message" class="form-control" id="Message" rows="5"
+                                placeholder="Example: How many times I appeared in a competition?" required></textarea>
+                        </div>
+                        <input type="hidden" name="_gotcha" style="display:none !important">
+                        <button type="submit" class="btn btn-danger">Done</button>
+                    </form>
+                </fieldset>
+                </p>
+            </section>
+        </main>
+        <footer class="text-center py-3">
+            <p>Written by <b>Rakshith</b></p>
+            <p>Published on May 26, 2025</p>
+            <p>&copy; All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
